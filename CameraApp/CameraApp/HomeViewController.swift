@@ -8,8 +8,8 @@
 import UIKit
 
 // IBRA
-class HomeViewController: UIViewController {
-
+class HomeViewController: UIViewController  , UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
     var homeStackView = UIStackView()
     
     var userNameLable = UILabel()
@@ -35,11 +35,12 @@ class HomeViewController: UIViewController {
         
         
         imageViewObject = UIImageView(frame:CGRect(x: 0, y: 100, width: 400, height: 600))
-       
+        
         
         imageViewObject.image = UIImage(named:"bb")
-      
-
+        
+        
+        
         self.view.addSubview(imageViewObject)
         
         
@@ -64,12 +65,41 @@ class HomeViewController: UIViewController {
     @objc func cameraButtonTapped(){
         
         
+        let vc = UIImagePickerController()
+        vc.sourceType = .camera
+        vc.allowsEditing = true
+        vc.delegate = self
+        present(vc, animated: true)
+        
+        
         print("iiii")
         
         
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true)
 
-   
+          guard let image = info[.editedImage] as? UIImage else {
+              print("No image found")
+              return
+          }
 
+          // print out the image size as a test
+        
+        imageViewObject.image = image
+          print(image.size)
+    }
+    
+    
+    
+    
 }
+
+
+
+
+
+
+
+
