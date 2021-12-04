@@ -13,6 +13,7 @@
 		CF878DFF2758DD9A004B33F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF878DFE2758DD9A004B33F1 /* Assets.xcassets */; };
 		CF878E0C2758DE9B004B33F1 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF878E0B2758DE9B004B33F1 /* LogInViewController.swift */; };
 		CF878E0E2758DED0004B33F1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF878E0D2758DED0004B33F1 /* HomeViewController.swift */; };
+		E0C5FF37275BB6B2000ED60C /* Launch Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C5FF36275BB6B2000ED60C /* Launch Screen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CF878E032758DD9A004B33F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF878E0B2758DE9B004B33F1 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		CF878E0D2758DED0004B33F1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E0C5FF36275BB6B2000ED60C /* Launch Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Launch Screen.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				CF878E032758DD9A004B33F1 /* Info.plist */,
 				CF878E0B2758DE9B004B33F1 /* LogInViewController.swift */,
 				CF878E0D2758DED0004B33F1 /* HomeViewController.swift */,
+				E0C5FF36275BB6B2000ED60C /* Launch Screen.swift */,
 			);
 			path = CameraApp;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF878E0E2758DED0004B33F1 /* HomeViewController.swift in Sources */,
+				E0C5FF37275BB6B2000ED60C /* Launch Screen.swift in Sources */,
 				CF878E0C2758DE9B004B33F1 /* LogInViewController.swift in Sources */,
 				CF878DFA2758DD98004B33F1 /* ViewController.swift in Sources */,
 				CF878DF62758DD98004B33F1 /* AppDelegate.swift in Sources */,
