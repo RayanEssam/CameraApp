@@ -74,7 +74,7 @@ class LogInViewController: UIViewController {
         // Button sign in
         view.addSubview(signInButton)
         signInButton.frame = CGRect(x: 80, y: 610, width: 250, height: 50)
-        signInButton.backgroundColor = .black
+        signInButton.backgroundColor =  UIColor(red: 0.61, green: 0.81, blue: 0.91, alpha: 1.00)
         signInButton.layer.cornerRadius = 25
         signInButton.setTitle("Login", for: .normal)
         signInButton.addTarget(self, action: #selector(logIn), for: .touchDown)
@@ -86,19 +86,19 @@ class LogInViewController: UIViewController {
         view.addSubview(accountLabel)
         accountLabel.frame = CGRect(x: 20, y: 700, width: 300, height: 100)
         accountLabel.text = "You don't have an account?"
-        accountLabel.textColor = .black
+        accountLabel.textColor = UIColor(red: 0.61, green: 0.81, blue: 0.91, alpha: 0.8)
         accountLabel.textAlignment = .center
         
         
         // Button SignUp
         view.addSubview(signUpButton)
-        signUpButton.frame = CGRect(x: 280, y: 734, width: 70, height: 30)
+        signUpButton.frame = CGRect(x: 275, y: 735, width: 70, height: 30)
         signUpButton.setTitle("SignUp", for: .normal)
         signUpButton.titleLabel?.font = .boldSystemFont(ofSize: 15)
         signUpButton.setTitleColor(.black, for: .normal)
-        //        signUpButton.addTarget(self, action: #selector(logIn), for: .touchDown)
         signUpButton.backgroundColor = .white
         signUpButton.layer.cornerRadius = 15
+        signUpButton.setTitleColor(UIColor(red: 0.61, green: 0.81, blue: 0.91, alpha: 1), for: .normal)
         
     }
     

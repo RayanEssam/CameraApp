@@ -37,32 +37,23 @@ class HomeViewController: UIViewController
         self.view.addSubview(cameraButton)
 
         userNameLable.frame = CGRect(x: 20, y: 80, width: screenWidth-40 , height: 35)
-        userNameLable.backgroundColor = .white
-        userNameLable.text = "Hello Ahmed"
-        userNameLable.font = .boldSystemFont(ofSize: 25)
+        userNameLable.textColor = UIColor(red: 0.61, green: 0.81, blue: 0.91, alpha: 1.00)
+        userNameLable.text = "Hello Ahmed, "
+        userNameLable.font = .boldSystemFont(ofSize: 28)
         userNameLable.textAlignment = .left
         
-        
-        
 
-        imageViewObject.backgroundColor = .green
         imageViewObject.frame = CGRect(x:20, y: 150, width:  screenWidth-40 , height: 300)
-        imageViewObject.image = UIImage(named:"bb")
+        imageViewObject.image = UIImage(named:"NoImage")
+  
         
-        
-        
-        
-    
-        
-        cameraButton.frame = CGRect(x:80, y: 800, width: 250, height: 50)
+  
+        cameraButton.frame = CGRect(x:70, y: 600, width: 250, height: 50)
         cameraButton.setTitle("Camera!", for: .normal)
         cameraButton.addTarget(self, action: #selector(cameraButtonTapped), for: .touchDown)
-        cameraButton.backgroundColor = .black
+        cameraButton.backgroundColor = UIColor(red: 0.61, green: 0.81, blue: 0.91, alpha: 1.00)
         cameraButton.layer.cornerRadius = 25
-        cameraButton.tintColor = .white
-        cameraButton.layoutMargins = .init(top: 20, left: 20, bottom: 20, right: 20)
-        
-        
+
     }
     
     
@@ -75,9 +66,7 @@ class HomeViewController: UIViewController
         vc.delegate = self
         present(vc, animated: true)
         
-        
-        print("iiii")
-        
+            
         
     }
     
@@ -88,11 +77,10 @@ class HomeViewController: UIViewController
               print("No image found")
               return
           }
-
-          // print out the image size as a test
         
         imageViewObject.image = image
         imageViewObject.contentMode = .scaleAspectFill
+//        image.layer.cornerRadius = 15
           print(image.size)
     }
     
