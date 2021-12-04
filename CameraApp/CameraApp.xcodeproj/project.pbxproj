@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		CF878DF62758DD98004B33F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF878DF52758DD98004B33F1 /* AppDelegate.swift */; };
 		CF878DF82758DD98004B33F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF878DF72758DD98004B33F1 /* SceneDelegate.swift */; };
-		CF878DFA2758DD98004B33F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF878DF92758DD98004B33F1 /* ViewController.swift */; };
 		CF878DFF2758DD9A004B33F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF878DFE2758DD9A004B33F1 /* Assets.xcassets */; };
 		CF878E0C2758DE9B004B33F1 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF878E0B2758DE9B004B33F1 /* LogInViewController.swift */; };
 		CF878E0E2758DED0004B33F1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF878E0D2758DED0004B33F1 /* HomeViewController.swift */; };
@@ -20,7 +19,6 @@
 		CF878DF22758DD98004B33F1 /* CameraApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF878DF52758DD98004B33F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF878DF72758DD98004B33F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CF878DF92758DD98004B33F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CF878DFE2758DD9A004B33F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF878E032758DD9A004B33F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF878E0B2758DE9B004B33F1 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -60,12 +58,11 @@
 			children = (
 				CF878DF52758DD98004B33F1 /* AppDelegate.swift */,
 				CF878DF72758DD98004B33F1 /* SceneDelegate.swift */,
-				CF878DF92758DD98004B33F1 /* ViewController.swift */,
-				CF878DFE2758DD9A004B33F1 /* Assets.xcassets */,
-				CF878E032758DD9A004B33F1 /* Info.plist */,
 				CF878E0B2758DE9B004B33F1 /* LogInViewController.swift */,
 				CF878E0D2758DED0004B33F1 /* HomeViewController.swift */,
 				E0C5FF36275BB6B2000ED60C /* Launch Screen.swift */,
+				CF878E032758DD9A004B33F1 /* Info.plist */,
+				CF878DFE2758DD9A004B33F1 /* Assets.xcassets */,
 			);
 			path = CameraApp;
 			sourceTree = "<group>";
@@ -142,7 +139,6 @@
 				CF878E0E2758DED0004B33F1 /* HomeViewController.swift in Sources */,
 				E0C5FF37275BB6B2000ED60C /* Launch Screen.swift in Sources */,
 				CF878E0C2758DE9B004B33F1 /* LogInViewController.swift in Sources */,
-				CF878DFA2758DD98004B33F1 /* ViewController.swift in Sources */,
 				CF878DF62758DD98004B33F1 /* AppDelegate.swift in Sources */,
 				CF878DF82758DD98004B33F1 /* SceneDelegate.swift in Sources */,
 			);

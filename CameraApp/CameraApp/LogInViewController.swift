@@ -18,12 +18,11 @@ class LogInViewController: UIViewController {
     let signUpButton = UIButton()
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.hideKeyboardWhenTappedAround()
-
+        
         view.backgroundColor = .white
         let screenWidth = view.frame.width
         
@@ -42,15 +41,7 @@ class LogInViewController: UIViewController {
         image.clipsToBounds = true
         image.backgroundColor = .green
         
-        
-        
-        
-        
-        
-        
-        
-        
-        // text field 1
+        // text field user name
         view.addSubview(userNameTextField)
         userNameTextField.frame = CGRect(x: 20, y: 400, width: screenWidth-40 , height: 40)
         userNameTextField.backgroundColor = UIColor(red: 0.61, green: 0.81, blue: 0.91, alpha: 0.2)
@@ -65,7 +56,7 @@ class LogInViewController: UIViewController {
         userNameTextField.text = nil
         
         
-        // text field 2
+        // text field password
         view.addSubview(passwordTextField)
         passwordTextField.frame = CGRect(x: 20, y: 450, width: screenWidth-40 , height: 40)
         passwordTextField.backgroundColor = UIColor(red: 0.61, green: 0.81, blue: 0.91, alpha: 0.2)
@@ -88,7 +79,6 @@ class LogInViewController: UIViewController {
         signInButton.setTitle("Login", for: .normal)
         signInButton.addTarget(self, action: #selector(logIn), for: .touchDown)
         signInButton.tintColor = .white
-        
         
         
         //label 2
@@ -115,28 +105,21 @@ class LogInViewController: UIViewController {
         
         if  userNameTextField.text  != ""  &&  passwordTextField.text != "" {
             
-            
             let homeViewController = HomeViewController()
             homeViewController.modalPresentationStyle = .fullScreen
-            
             homeViewController.userName = userNameTextField.text ?? "IDK"
             self.present(homeViewController, animated:true, completion:nil)
             
         }else{
             image.image = UIImage(named:"sad")
-
         }
-        
-        
-      
-      
     }
 }
 
-
-
 extension UIViewController {
+    
     func hideKeyboardWhenTappedAround() {
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
