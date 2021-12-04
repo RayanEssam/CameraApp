@@ -28,7 +28,7 @@ class LaunchScreen : UIViewController {
         super.viewDidLayoutSubviews()
         imageLaunchScreen.center = view.center
         
-        DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
+        DispatchQueue.main.asyncAfter(deadline: .now()+1.5) {
             self.animate()
         }
     }
