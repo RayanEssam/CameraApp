@@ -15,26 +15,16 @@ class LogInViewController: UIViewController {
     let passwordTextField = UITextField()
     let signInButton = UIButton()
     let image = UIImageView()
-//    let stackView = UIStackView()
+    //    let stackView = UIStackView()
     let signUpButton = UIButton()
-
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
-        
-        //stackView
-        
 
-//        view.addSubview(stackView)
-//        stackView.frame = CGRect(x: 20, y: 150, width: view.frame.width - 40,  height: view.frame.height / 1.5 )
-//        stackView.axis = NSLayoutConstraint.Axis.vertical
-//        stackView.alignment = UIStackView.Alignment.center
-//        stackView.spacing = 10.0
-//        stackView.distribution = .fill
-//        stackView.backgroundColor = .red
         
         // Label 1
         view.addSubview(welcomeLabel)
@@ -63,23 +53,23 @@ class LogInViewController: UIViewController {
         // text field 1
         view.addSubview(userNameTextField)
         userNameTextField.frame = CGRect(x: 60, y: 500, width: 300, height: 40)
-//        textField1.backgroundColor = .lightGray
+        //        textField1.backgroundColor = .lightGray
         userNameTextField.layer.cornerRadius = 10
         userNameTextField.placeholder = "  User Name  "
         userNameTextField.textColor = .black
         userNameTextField.layer.borderWidth = 0.1
-
+        
         
         // text field 2
         view.addSubview(passwordTextField)
         passwordTextField.frame = CGRect(x: 60, y: 550, width: 300, height: 40)
-//        textField2.backgroundColor = .lightGray
+        //        textField2.backgroundColor = .lightGray
         passwordTextField.layer.cornerRadius = 10
         passwordTextField.placeholder = "  Password  "
         passwordTextField.isSecureTextEntry = true
         passwordTextField.textColor = .black
         passwordTextField.layer.borderWidth = 0.1
-
+        
         
         // Button sign in
         view.addSubview(signInButton)
@@ -92,16 +82,13 @@ class LogInViewController: UIViewController {
         
         
         
-        
-        
-        
         //label 2
         view.addSubview(accountLabel)
         accountLabel.frame = CGRect(x: 20, y: 700, width: 300, height: 100)
         accountLabel.text = "You don't have an account?"
         accountLabel.textColor = .black
         accountLabel.textAlignment = .center
-
+        
         
         // Button SignUp
         view.addSubview(signUpButton)
@@ -109,7 +96,7 @@ class LogInViewController: UIViewController {
         signUpButton.setTitle("SignUp", for: .normal)
         signUpButton.titleLabel?.font = .boldSystemFont(ofSize: 15)
         signUpButton.setTitleColor(.black, for: .normal)
-//        signUpButton.addTarget(self, action: #selector(logIn), for: .touchDown)
+        //        signUpButton.addTarget(self, action: #selector(logIn), for: .touchDown)
         signUpButton.backgroundColor = .white
         signUpButton.layer.cornerRadius = 15
         
@@ -117,11 +104,11 @@ class LogInViewController: UIViewController {
     
     @objc func logIn(){
         
-            
-//        let nextVC = HomeViewController()
-//        nextVC.test = textField1.text ?? " "
-//        present(next, animated: true, completion: .none)
-            
+        
+        let homeViewController = HomeViewController()
+        homeViewController.modalPresentationStyle = .fullScreen
+        self.present(homeViewController, animated:true, completion:nil)
+        
     }
 }
 

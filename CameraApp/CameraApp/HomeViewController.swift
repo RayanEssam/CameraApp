@@ -8,9 +8,10 @@
 import UIKit
 
 // IBRA
-class HomeViewController: UIViewController  , UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class HomeViewController: UIViewController
+, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    var homeStackView = UIStackView()
+   
     
     var userNameLable = UILabel()
     
@@ -18,6 +19,7 @@ class HomeViewController: UIViewController  , UIImagePickerControllerDelegate, U
     
     var imageViewObject = UIImageView()
     
+
     
     
     
@@ -26,39 +28,41 @@ class HomeViewController: UIViewController  , UIImagePickerControllerDelegate, U
         
         view.backgroundColor = .white
         
+        let screenWidth = view.frame.width
+        let screenHeight = view.frame.width
         
-        userNameLable.frame = CGRect(x:100, y: 60, width: 200, height: 40)
+
+        self.view.addSubview(userNameLable)
+        self.view.addSubview(imageViewObject)
+        self.view.addSubview(cameraButton)
+
+        userNameLable.frame = CGRect(x: 20, y: 80, width: screenWidth-40 , height: 35)
         userNameLable.backgroundColor = .white
         userNameLable.text = "Hello Ahmed"
-        userNameLable.textAlignment = .center
+        userNameLable.font = .boldSystemFont(ofSize: 25)
+        userNameLable.textAlignment = .left
         
         
         
-        imageViewObject = UIImageView(frame:CGRect(x: 0, y: 100, width: 400, height: 600))
-        
-        
+
+        imageViewObject.backgroundColor = .green
+        imageViewObject.frame = CGRect(x:20, y: 150, width:  screenWidth-40 , height: 300)
         imageViewObject.image = UIImage(named:"bb")
         
         
         
-        self.view.addSubview(imageViewObject)
         
+    
         
-        
-        
-        
-        
-        
-        
-        cameraButton.frame = CGRect(x:70, y: 800, width: 300, height: 40)
-        cameraButton.setTitle("login", for: .normal)
+        cameraButton.frame = CGRect(x:80, y: 800, width: 250, height: 50)
+        cameraButton.setTitle("Camera!", for: .normal)
         cameraButton.addTarget(self, action: #selector(cameraButtonTapped), for: .touchDown)
-        cameraButton.backgroundColor = .blue
+        cameraButton.backgroundColor = .black
+        cameraButton.layer.cornerRadius = 25
+        cameraButton.tintColor = .white
+        cameraButton.layoutMargins = .init(top: 20, left: 20, bottom: 20, right: 20)
         
         
-        
-        view.addSubview(userNameLable)
-        view.addSubview(cameraButton)
     }
     
     
@@ -88,6 +92,7 @@ class HomeViewController: UIViewController  , UIImagePickerControllerDelegate, U
           // print out the image size as a test
         
         imageViewObject.image = image
+        imageViewObject.contentMode = .scaleAspectFill
           print(image.size)
     }
     
@@ -95,7 +100,6 @@ class HomeViewController: UIViewController  , UIImagePickerControllerDelegate, U
     
     
 }
-
 
 
 
