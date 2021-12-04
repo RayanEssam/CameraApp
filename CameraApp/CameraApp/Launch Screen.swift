@@ -18,7 +18,7 @@ class LaunchScreen : UIViewController {
         
         view.addSubview(imageLaunchScreen)
         imageLaunchScreen.frame = CGRect(x: 110, y: 200 , width: 200 , height: 200)
-        imageLaunchScreen.image = UIImage(named:"logo")
+        imageLaunchScreen.image = UIImage(named:"smile")
         imageLaunchScreen.contentMode = .scaleAspectFill
         imageLaunchScreen.layer.cornerRadius = imageLaunchScreen.frame.height / 2
         imageLaunchScreen.clipsToBounds = true

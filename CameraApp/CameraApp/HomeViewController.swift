@@ -14,11 +14,10 @@ class HomeViewController: UIViewController
    
     
     var userNameLable = UILabel()
-    
     var cameraButton = UIButton()
-    
     var imageViewObject = UIImageView()
     
+    var userName : String = " "
 
     
     
@@ -29,16 +28,14 @@ class HomeViewController: UIViewController
         view.backgroundColor = .white
         
         let screenWidth = view.frame.width
-        let screenHeight = view.frame.width
         
-
         self.view.addSubview(userNameLable)
         self.view.addSubview(imageViewObject)
         self.view.addSubview(cameraButton)
 
         userNameLable.frame = CGRect(x: 20, y: 80, width: screenWidth-40 , height: 35)
         userNameLable.textColor = UIColor(red: 0.61, green: 0.81, blue: 0.91, alpha: 1.00)
-        userNameLable.text = "Hello Ahmed, "
+        userNameLable.text = "Hello \(userName) ,"
         userNameLable.font = .boldSystemFont(ofSize: 28)
         userNameLable.textAlignment = .left
         
@@ -71,6 +68,7 @@ class HomeViewController: UIViewController
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
         picker.dismiss(animated: true)
 
           guard let image = info[.editedImage] as? UIImage else {
@@ -78,10 +76,9 @@ class HomeViewController: UIViewController
               return
           }
         
+        
         imageViewObject.image = image
         imageViewObject.contentMode = .scaleAspectFill
-//        image.layer.cornerRadius = 15
-          print(image.size)
     }
     
     

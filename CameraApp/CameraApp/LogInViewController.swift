@@ -15,7 +15,6 @@ class LogInViewController: UIViewController {
     let passwordTextField = UITextField()
     let signInButton = UIButton()
     let image = UIImageView()
-    //    let stackView = UIStackView()
     let signUpButton = UIButton()
     
     
@@ -23,22 +22,23 @@ class LogInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
+        self.hideKeyboardWhenTappedAround()
 
+        view.backgroundColor = .white
+        let screenWidth = view.frame.width
         
         // Label 1
         view.addSubview(welcomeLabel)
         welcomeLabel.frame = CGRect(x: 50 , y: 50, width: 300 , height: 80)
         welcomeLabel.text = "Welcome to Your Camera App"
-        welcomeLabel.textColor = .black
+        welcomeLabel.textColor = UIColor(red: 0.61, green: 0.81, blue: 0.91, alpha: 1)
         welcomeLabel.textAlignment = .center
         
         //image
         view.addSubview(image)
-        image.frame = CGRect(x: 110, y: 200 , width: 200 , height: 200)
-        image.image = UIImage(named:"logo")
+        image.frame = CGRect(x: 100, y: 200 , width: 200 , height: 200)
+        image.image = UIImage(named:"smile")
         image.contentMode = .scaleAspectFill
-        image.layer.cornerRadius = image.frame.height / 2
         image.clipsToBounds = true
         image.backgroundColor = .green
         
@@ -52,24 +52,33 @@ class LogInViewController: UIViewController {
         
         // text field 1
         view.addSubview(userNameTextField)
-        userNameTextField.frame = CGRect(x: 60, y: 500, width: 300, height: 40)
-        //        textField1.backgroundColor = .lightGray
+        userNameTextField.frame = CGRect(x: 20, y: 500, width: screenWidth-40 , height: 40)
+        userNameTextField.backgroundColor = UIColor(red: 0.61, green: 0.81, blue: 0.91, alpha: 0.2)
         userNameTextField.layer.cornerRadius = 10
-        userNameTextField.placeholder = "  User Name  "
-        userNameTextField.textColor = .black
-        userNameTextField.layer.borderWidth = 0.1
+        userNameTextField.textColor = UIColor(red: 0.10, green: 0.42, blue: 0.70, alpha: 1.00)
+        userNameTextField.layer.borderWidth = 0.2
+        userNameTextField.layer.borderColor = CGColor(red: 0.10, green: 0.42, blue: 0.70, alpha: 1.00)
+        userNameTextField.enablesReturnKeyAutomatically = true
+        userNameTextField.attributedPlaceholder = NSAttributedString(
+            string: "  User Name  ",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 0.10, green: 0.42, blue: 0.71, alpha: 0.5)])
+        userNameTextField.text = nil
         
         
         // text field 2
         view.addSubview(passwordTextField)
-        passwordTextField.frame = CGRect(x: 60, y: 550, width: 300, height: 40)
-        //        textField2.backgroundColor = .lightGray
+        passwordTextField.frame = CGRect(x: 20, y: 550, width: screenWidth-40 , height: 40)
+        passwordTextField.backgroundColor = UIColor(red: 0.61, green: 0.81, blue: 0.91, alpha: 0.2)
         passwordTextField.layer.cornerRadius = 10
         passwordTextField.placeholder = "  Password  "
         passwordTextField.isSecureTextEntry = true
-        passwordTextField.textColor = .black
-        passwordTextField.layer.borderWidth = 0.1
-        
+        passwordTextField.textColor = UIColor(red: 0.10, green: 0.42, blue: 0.70, alpha: 1.00)
+        passwordTextField.layer.borderColor = CGColor(red: 0.10, green: 0.42, blue: 0.70, alpha: 1.00)
+        passwordTextField.layer.borderWidth = 0.2
+        passwordTextField.attributedPlaceholder = NSAttributedString(
+            string: "  Password  ",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 0.10, green: 0.42, blue: 0.71, alpha: 0.5)])
+        passwordTextField.text = nil
         
         // Button sign in
         view.addSubview(signInButton)
@@ -105,15 +114,36 @@ class LogInViewController: UIViewController {
     @objc func logIn(){
         
         
-        let homeViewController = HomeViewController()
-        homeViewController.modalPresentationStyle = .fullScreen
-        self.present(homeViewController, animated:true, completion:nil)
+        if  userNameTextField.text  != ""  &&  passwordTextField.text != "" {
+            
+            
+            let homeViewController = HomeViewController()
+            homeViewController.modalPresentationStyle = .fullScreen
+            
+            homeViewController.userName = userNameTextField.text ?? "IDK"
+            self.present(homeViewController, animated:true, completion:nil)
+            
+        }else{
+            image.image = UIImage(named:"sad")
+
+        }
         
+        
+      
+      
     }
 }
 
-extension UITextField {
-    func clear(){
-        self.text = ""
+
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
