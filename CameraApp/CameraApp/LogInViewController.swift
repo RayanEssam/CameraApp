@@ -52,7 +52,7 @@ class LogInViewController: UIViewController {
         
         // text field 1
         view.addSubview(userNameTextField)
-        userNameTextField.frame = CGRect(x: 20, y: 500, width: screenWidth-40 , height: 40)
+        userNameTextField.frame = CGRect(x: 20, y: 400, width: screenWidth-40 , height: 40)
         userNameTextField.backgroundColor = UIColor(red: 0.61, green: 0.81, blue: 0.91, alpha: 0.2)
         userNameTextField.layer.cornerRadius = 10
         userNameTextField.textColor = UIColor(red: 0.10, green: 0.42, blue: 0.70, alpha: 1.00)
@@ -67,7 +67,7 @@ class LogInViewController: UIViewController {
         
         // text field 2
         view.addSubview(passwordTextField)
-        passwordTextField.frame = CGRect(x: 20, y: 550, width: screenWidth-40 , height: 40)
+        passwordTextField.frame = CGRect(x: 20, y: 450, width: screenWidth-40 , height: 40)
         passwordTextField.backgroundColor = UIColor(red: 0.61, green: 0.81, blue: 0.91, alpha: 0.2)
         passwordTextField.layer.cornerRadius = 10
         passwordTextField.placeholder = "  Password  "
@@ -82,7 +82,7 @@ class LogInViewController: UIViewController {
         
         // Button sign in
         view.addSubview(signInButton)
-        signInButton.frame = CGRect(x: 80, y: 610, width: 250, height: 50)
+        signInButton.frame = CGRect(x: 80, y: 510, width: 250, height: 50)
         signInButton.backgroundColor =  UIColor(red: 0.61, green: 0.81, blue: 0.91, alpha: 1.00)
         signInButton.layer.cornerRadius = 25
         signInButton.setTitle("Login", for: .normal)
@@ -93,7 +93,7 @@ class LogInViewController: UIViewController {
         
         //label 2
         view.addSubview(accountLabel)
-        accountLabel.frame = CGRect(x: 20, y: 700, width: 300, height: 100)
+        accountLabel.frame = CGRect(x: 20, y: 550, width: 300, height: 100)
         accountLabel.text = "You don't have an account?"
         accountLabel.textColor = UIColor(red: 0.61, green: 0.81, blue: 0.91, alpha: 0.8)
         accountLabel.textAlignment = .center
@@ -101,10 +101,9 @@ class LogInViewController: UIViewController {
         
         // Button SignUp
         view.addSubview(signUpButton)
-        signUpButton.frame = CGRect(x: 275, y: 735, width: 70, height: 30)
+        signUpButton.frame = CGRect(x: 275, y: 585, width: 70, height: 30)
         signUpButton.setTitle("SignUp", for: .normal)
         signUpButton.titleLabel?.font = .boldSystemFont(ofSize: 15)
-        signUpButton.setTitleColor(.black, for: .normal)
         signUpButton.backgroundColor = .white
         signUpButton.layer.cornerRadius = 15
         signUpButton.setTitleColor(UIColor(red: 0.61, green: 0.81, blue: 0.91, alpha: 1), for: .normal)
