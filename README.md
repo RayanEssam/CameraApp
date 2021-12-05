@@ -1,12 +1,12 @@
 # CameraApp
-To tryout our app you can simply write the following code in the terminal https://github.com/RayanEssam/CameraApp.git , or download it as zip folder.
+To tryout our app you can simply write the following code in the terminal git clone https://github.com/RayanEssam/CameraApp.git , or download it as zip folder.
 
 ## About the App 
 This app contains 3 main screens :
 - Launch Screen 
 - LogIn Screen 
 - Image Screen 
-- 
+
 All of the 3 screens are built by code (Programmaticly) without using Interface Builder.
 
 ### Challeges
